@@ -1,9 +1,13 @@
 <?php
-    // need to devide sting to array for better word control
     $textP = strtolower($_POST['paragraph']);
     $badWord = strtolower($_POST['badWord']);
-
-    $finalText = str_replace($badWord, '***' , $textP)
+    $finalText = str_replace($badWord, '***' , $textP);
+    
+    
+    // $exploded = explode( " " , $badWord);
+    // ho provato a fare in modo da censurare due parole distinte ma facendo cosi censura anche la parola che contiene la porla inserita 
+    // come ad esempio parola da censurare: amo e io scrivo amore il risultato finale e : ***re sarebbe da aggiungere un funzione per un controllo maggiore 
+    // provo con il separatore ,
 ?> 
 
 
@@ -17,10 +21,17 @@
     <title>Php badwords</title>
 </head>
 <body>
-    <form action="displayIndex.php" method="POST">
-        <h6>Parola censurata: <?php echo $badWord ?></h6>
-        <p> Il tuo testo censurato: <?php echo $finalText ?> </p>
+    <div class="container">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-8">
+                <h4 class="my-3">Parola da censurare: <br></h4>
+                <input type="text" readonly value="<?php echo $badWord ?>">
+                <h4 class="my-3"> Il tuo testo censurato:</h4>
+                <textarea cols="50" rows="10" readonly><?php echo $finalText ?></textarea>
+            </div>
+        </div>
+    </div>
 
-    </form>
+
 </body>
 </html>
