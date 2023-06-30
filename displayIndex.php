@@ -1,4 +1,5 @@
 <?php
+    // need to devide sting to array for better word control
     $textP = strtolower($_POST['paragraph']);
     $badWord = strtolower($_POST['badWord']);
 
@@ -18,7 +19,7 @@
 <body>
     <form action="displayIndex.php" method="POST">
         <h6>Parola censurata: <?php echo $badWord ?></h6>
-        <p> Il tuo testo censurato: <?php echo $finalText ?></p>
+        <p> Il tuo testo censurato: <?php echo $finalText ?> </p>
 
     </form>
 </body>
