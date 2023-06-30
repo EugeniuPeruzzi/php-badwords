@@ -1,6 +1,6 @@
 <?php
-    $textP = $_POST['paragraph'];
-    $badWord = $_POST['badWord'];
+    $textP = strtolower($_POST['paragraph']);
+    $badWord = strtolower($_POST['badWord']);
 
     $finalText = str_replace($badWord, '***' , $textP)
 ?> 
