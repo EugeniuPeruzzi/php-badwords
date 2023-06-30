@@ -1,13 +1,15 @@
 <?php
     $textP = strtolower($_POST['paragraph']);
     $badWord = strtolower($_POST['badWord']);
-    $finalText = str_replace($badWord, '***' , $textP);
+    $finalText = str_replace($exploded, '***' , $textP);
+    // con questo non censura parole multiple aggiungendo *** per parola 
+    $exploded = explode( " " , $badWord);
+
+
     
-    
-    // $exploded = explode( " " , $badWord);
     // ho provato a fare in modo da censurare due parole distinte ma facendo cosi censura anche la parola che contiene la porla inserita 
+    // provato con diversi separatori, nulla da fare
     // come ad esempio parola da censurare: amo e io scrivo amore il risultato finale e : ***re sarebbe da aggiungere un funzione per un controllo maggiore 
-    // provo con il separatore ,
 ?> 
 
 
