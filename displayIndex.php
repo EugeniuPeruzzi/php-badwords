@@ -30,6 +30,7 @@
                 <input type="text" readonly value="<?php echo $badWord ?>">
                 <h4 class="my-3"> Il tuo testo censurato:</h4>
                 <textarea cols="50" rows="10" readonly><?php echo $finalText ?></textarea>
+                <h5> La lunghezza del tuo testo: <?php echo strlen($textP) ?></h5>
             </div>
         </div>
     </div>
