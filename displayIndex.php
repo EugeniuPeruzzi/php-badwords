@@ -1,6 +1,8 @@
 <?php
-    $textP = $_POST['paragraph']
+    $textP = $_POST['paragraph'];
+    $badWord = $_POST['badWord'];
 
+    $finalText = str_replace($badWord, '***' , $textP)
 ?> 
 
 
@@ -15,7 +17,9 @@
 </head>
 <body>
     <form action="displayIndex.php" method="POST">
-        <p><?php echo $textP ?></p>
+        <h6>Parola censurata: <?php echo $badWord ?></h6>
+        <p> Il tuo testo censurato: <?php echo $finalText ?></p>
+
     </form>
 </body>
 </html>
