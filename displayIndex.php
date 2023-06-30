@@ -1,9 +1,9 @@
 <?php
     $textP = strtolower($_POST['paragraph']);
     $badWord = strtolower($_POST['badWord']);
-    $finalText = str_replace($exploded, '***' , $textP);
     // con questo non censura parole multiple aggiungendo *** per parola 
     $exploded = explode( " " , $badWord);
+    $finalText = str_replace($exploded, '***' , $textP);
 
 
     
